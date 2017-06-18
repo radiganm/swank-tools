@@ -1,0 +1,4 @@
+#+TITLE: Command line swank tools using Steel Bank Common Lisp (SBCL)
+#+AUTHOR: Mac Radigan
+
+ # *EOF* 

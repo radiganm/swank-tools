@@ -1,0 +1,3 @@
+[submodule "submodules/asdf-central-registry"]
+	path = submodules/asdf-central-registry
+	url = http://github.com/radiganm/asdf-central-registry.git
