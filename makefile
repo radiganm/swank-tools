@@ -18,7 +18,7 @@ install: build
 update:
 	$(MAKE) -C ./submodules update
 
-build: packages-apt applications
+build: applications
 
 packages-apt: update
 	sudo apt-get install -y sbcl
@@ -27,9 +27,9 @@ applications:
 	$(MAKE) -f $(BLDDIR)/$@.mk
 
 clean:
-	$(MAKE) -C ailab -f $(BLDDIR)/applications.mk $@
+	$(MAKE) -f $(BLDDIR)/applications.mk $@
 
 clobber:
-	$(MAKE) -C ailab -f $(BLDDIR)/applications.mk $@
+	$(MAKE) -f $(BLDDIR)/applications.mk $@
 
 ## *EOF*

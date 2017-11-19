@@ -25,7 +25,7 @@ APPDIR    = ./$(SRCDIR)/apps
 TESTSDIR  = ./$(SRCDIR)/tests
 SUBDIR    = ./submodules
 
-TARGET = ailab
+TARGET = swank-tools
 
 LIBS = \
   $(LIBDIR)/lib$(TARGET).a  \
@@ -70,7 +70,7 @@ init:
 	@-mkdir -p $(LIBDIR)
 	@-mkdir -p $(TESTDIR)
 	@-mkdir -p $(FMODDIR)
-	@-(cd $(BINDIR); ln -fs ../$(SCRIPTDIR)/system .)
+	@#@-(cd $(BINDIR); ln -fs ../$(SCRIPTDIR)/system .)
 
 %.oC11: %.cpp
 	$(CCC) $(C11FLAGS) -c -o $@ $^

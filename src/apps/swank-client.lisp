@@ -1,4 +1,4 @@
-;; swank.lisp
+;; swank-client.lisp
 ;; Copyright 2016 Mac Radigan
 ;; All Rights Reserved
 
@@ -28,7 +28,7 @@
             (progn
               (format *error-output* "~a~%" "exiting")
               (finish-output *error-output*)
-              (SB-EXT:QUIT)
+              (sb-ext:quit)
             ) ; progn
           ) ; t
         ) ; if

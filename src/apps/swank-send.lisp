@@ -6,6 +6,8 @@
   (asdf:operate 'asdf:load-op 'swank-client)
 ; (ql:quickload :swank-client)
 
+  (sb-ext:restrict-compiler-policy 'debug)
+
   (defun swank-client () 
     (defvar *myswank* (swank-client:slime-connect "127.0.0.1" 4005))
     (loop 
@@ -25,7 +27,7 @@
             (progn
               (format *error-output* "~a~%" "exiting")
               (finish-output *error-output*)
-              (SB-EXT:QUIT)
+              (sb-ext:quit)
             ) ; progn
           ) ; t
         ) ; if
